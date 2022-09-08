@@ -6,6 +6,6 @@ setup: |
 ---
 
 <div class="grid place-items-center h-screen content-center">
-    <Button>Tailwind Button in Markdown!</Button>
-    <a href="/" class="p-4 underline">Go home...</a>
+  <Button>Tailwind Button in Markdown!</Button>
+  <a href="/" class="p-4 underline">Go home...</a>
 </div>
