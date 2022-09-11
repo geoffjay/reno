@@ -1,0 +1,36 @@
+---
+const { frontmatter } = Astro.props;
+
+import Heading from "../components/elements/Heading.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Reno - {frontmatter.title}</title>
+  </head>
+  <body>
+    <header class="w-full container mx-auto">
+      <div class="flex flex-col items-center py-12">
+        <p class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl">
+          { frontmatter.title }
+        </p>
+        <p class="text-lg text-gray-600">
+          { frontmatter.description }
+        </p>
+      </div>
+    </header>
+
+    <a href="/" class="p-4 underline">Go home...</a>
+
+    <div class="container mx-auto flex flex-wrap py-6">
+      <section class="w-full md:w-2/3 flex flex-col items-center px-3">
+        <article class="flex flex-col shadow my-4">
+          <slot />
+        </article>
+      </section>
+    </div>
+  </body>
+</html>
